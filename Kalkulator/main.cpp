@@ -7,7 +7,6 @@ int main(){
 
     cout << "Podaj liczbe: ";
     cin >> a;
-
     for( int i=0; i<=a; i++){
         for( int j=0; j<=i; j++)
         {
@@ -18,7 +17,7 @@ int main(){
 
     cout << "--------------------------------------------" << endl;
 
-    for( int i=0; i<=a; i++){
+    for( int i=a; i>=0; i--){
         for( int j=0; j<=i; j++)
         {
             cout << "*";
