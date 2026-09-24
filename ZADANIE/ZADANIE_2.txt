@@ -1,0 +1,29 @@
+Proszę napisz program, który korzystając z pętli for wypisze taką piramidkę
+
+   *
+  **
+ ***
+****
+Możesz w ktorą stronę chcesz to zrobić 
+
+****
+ ***
+  **
+   *
+
+Podpowiedź = tutaj będą trzy pętle for :D 
+
+for ()
+{
+
+	for ()
+	{
+		//wypisywanie spacji
+	}
+
+	for ()
+	{
+		//wypisywal gwiazdek :)
+	}
+
+}
