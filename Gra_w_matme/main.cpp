@@ -26,25 +26,55 @@ using namespace std;
 
 ***/
 
+void naglowek( int liczba=0 ){
+    cout << "Gra w matematyke? Czemu nie" << endl << "Ile to jest... " << endl;
+
+    for( int i=0; i<liczba; i++){
+        cout << endl;
+    }
+}
+
+int losowa(int ile, int liczba_startowa){
+    return rand()%ile+liczba_startowa;
+
+}
+void wyniki(int punkty){
+    cout << endl << "zdobyles " << punkty << " punktow" << endl;
+}
+
+
+
+
 int main()
 {
+    srand(time(NULL));
 
-    int a=6, b=8; //czynniki mnożenia
+    int a, b; //czynniki mnożenia
     int wynik; // wypisywany przez usera wyniki
+    int i=0,punkty=0;
 
-
-    cout << "Gra w matematykę? Czemu nie" << endl << "Ile to jest... " << endl;
-    cout << a << "*" << b << "=?   odpowiedz:";
-
-    cin >> wynik;
-
-    if( a*b == wynik ){
-        cout << "TAAAAAAAK, Dobrze ;D" << endl;
-    }
-    else
+    naglowek(5);
+    do
     {
-        cout << "Niestety nie ;( Nie poddawaj sie i sproboj jeszcze raz!"  << endl;
-    }
+        a=losowa(10,1);
+        b=losowa(10,1);
 
+        cout << a << "*" << b << "=?   odpowiedz:";
+
+        cin >> wynik;
+
+        if( a*b == wynik ){
+            cout << "TAAAAAAAK, Dobrze ;D" << endl;
+            punkty = punkty + 10;
+        }
+        else
+        {
+            cout << "Niestety nie ;( Nie poddawaj sie i sproboj jeszcze raz!"  << endl;
+            punkty = punkty - 5;
+        }
+
+    }while(i++ < 10);
+
+    wyniki(punkty);
     return 0;
 }
